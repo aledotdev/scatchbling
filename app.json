@@ -1,0 +1,8 @@
+{
+  "name": "Scatchbling test in Python",
+  "description": "...",
+  "image": "heroku/python",
+  "repository": "https://github.com/aledotdev/scatchbling",
+  "keywords": ["python", "django" ],
+  "addons": [ "heroku-postgresql" ]
+}

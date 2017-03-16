@@ -20,7 +20,8 @@ class BackscratcherSerializer(serializers.HyperlinkedModelSerializer):
 
     def create(self, validated_data):
         instance = Backscratcher.objects.create(**validated_data)
-        sizes = Size.objects.filter(name__in=self.initial_data['size']).all()
+        sizes_names = [s['name'] for s in self.initial_data.get('size', [])]
+        sizes = Size.objects.filter(name__in=sizes_names).all()
         instance.size.add(*sizes)
 
         return instance
