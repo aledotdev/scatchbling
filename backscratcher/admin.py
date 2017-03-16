@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Backscratcher, Size
+
+admin.site.register(Backscratcher)
+admin.site.register(Size)
